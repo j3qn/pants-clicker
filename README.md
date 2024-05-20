@@ -9,4 +9,9 @@ You need to have python installed on your pc [Download python here](https://www.
 - `pip install eel[jinja2]`
 - `pip install win32gui`
 
-![IMG]()
+![IMG](./assets/gui.png)
+
+
+My discord: jeanclap
+
+Credits to: @B4mb0u
