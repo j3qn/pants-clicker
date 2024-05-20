@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> jean</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="https://cdn.tailwindcss.com/">
+
+    </script>
+    <script type="text/javascript">
+      eel.expose(say_hello_js); 
+      function say_hello_js(x) {
+        console.log("Hello from " + x);
+        // Write effect 
+        const element = document.getElementById('username');
+        const text = x;
+
+        let index = 0;
+
+    function typeWriter() {
+       if (index < text.length) {
+        element.innerText += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); 
+        }
+      }
+
+typeWriter();
+        
+      }
+
+    
+
+
+    </script>
+  </head>
+
+  <style>
+     input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; 
+            width: 14px;
+            height: 14px;
+            background: #34d399; 
+            cursor: pointer;
+            border-radius: 20%;
+            
+         
+       
+        }
+
+        input[type=range]::-webkit-slider-thumb:hover {
+            -webkit-appearance: none; 
+            width: 14px;
+            height: 14px;
+            background: #28a074; 
+            cursor: pointer;
+            border-radius: 20%;
+            transition: all 0.3s ease-in-out;
+            
+         
+       
+        }
+
+
+        .dynamic-color {
+           
+            transition: background-color 0.3s;
+        }
+
+
+
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #34d399;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+  </style>
+
+  <body class="relative bg-neutral-950">
+
+    <div class="flex  flex-row h-screen transition-all duration-300 relative">
+
+      <div class="relative fixed flex items-center flex-col  w-24  text-white flex-shrink-0 relative py-6 sticky top-0 overflow-y-auto">
+
+        
+          <svg fill="#fff" class="absolute top-6 w-12 h-12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,0,1-7.984-7.685A7.314,7.314,0,0,0,16,6.667a7.222,7.222,0,0,0-.207-1.708A8,8,0,0,1,12,20Z"></path></g></svg>
+      
+
+        <div class="mt-4 flex space-y-8 flex-col h-screen items-center justify-center">
+
+       
+        <svg id="autoclickSectionButton" fill="" class="fill-white w-7 h-7 hover:fill-white cursor-pointer transitions-all duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M7.936,11.97a1,1,0,1,0-1.415,1.414l.373.372L3.3,17.35a1.024,1.024,0,0,0,0,1.448l1.9,1.9a1.024,1.024,0,0,0,1.448,0l3.593-3.593.372.372a1,1,0,0,0,1.414-1.415Z">
+            </path>
+            <polygon points="14.3 3 9.015 10.928 13.071 14.985 21 9.7 21 3 14.3 3"></polygon>
+          </g>
+        </svg>
+
+        <svg id="configSectionButton" fill="#2C2C2C" class="w-7 h-7 hover:text-white hover:fill-white cursor-pointer transitions-all duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M10,20V16H5a1,1,0,0,1-1-1V12H20v3a1,1,0,0,1-1,1H14v3.893a2.075,2.075,0,0,1-1.664,2.08A2,2,0,0,1,10,20ZM20,3a1,1,0,0,0-1-1H12L10,6,8,2H5A1,1,0,0,0,4,3v7H20Z">
+            </path>
+          </g>
+        </svg>
+
+
+        <svg fill="#2C2C2C" class="w-7 h-7 hover:text-white hover:fill-white cursor-pointer transitions-all duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M12,5C7.973,5,4.516,7.881,3,12c1.516,4.119,4.973,7,9,7s7.484-2.881,9-7C19.484,7.881,16.027,5,12,5Zm0,10a3,3,0,1,1,3-3A3,3,0,0,1,12,15Z">
+            </path>
+          </g>
+        </svg>
+
+
+         </div>
+      </div>
+
+
+      <div class="overflow-y-auto w-full  transition-all  duration-300">
+
+     
+      <div  id="autoclickSection" data-aos="zoom-in"
+      data-aos-anchor-placement="top-center" data-aos-duration="400" class="flex-1 m-6">
+      <section class="w-full p-3 bg-[#0E0E0E] rounded-xl">
+        <h3 class=" font-light text-neutral-300">Welcome back, <span class="text-emerald-400 font-semibold" id="username"></span></h3>
+
+
+
+      </section>
+
+
+      <section class="flex space-x-4">
+
+     
+
+
+      <div class="w-1/2 p-3 bg-[#0E0E0E] rounded-xl mt-4">
+        <div class="flex w-full flex items-center">
+
+        
+        <h3 class=" font-light text-neutral-300 ">Left Clicker</h3>
+        <div id="toggleLeftClicker" class="ml-auto w-4 h-4 bg-white/5 rounded-full border-2 border-transparent hover:border-emerald-400 transitions-all duration-300">
+
+        </div>
+      </div>
+        <label for="cps" class="w-full font-normal text-neutral-500 text-sm">CPS <span class="ml-auto text-sm text-neutral-400" id="cpsValue">10</span></label>
+        <input name="cps" max="20" min="1" cl step="1" class="mb-4 slider bg-white/5 rounded-xl w-full cursor-pointer outline-none h-[10px]" style="appearance: none;" type="range" data-v-62e245f8="">
+        <label for="shakeEffectValue" class=" w-full font-normal text-neutral-500 text-sm">ShakeEffect Value <span class="ml-auto text-sm text-neutral-400" id="shakeEffectValueText">10</span></label>
+        <input name="shakeEffectValue" max="20" min="1" cl step="1" class="slider bg-white/5 rounded-xl w-full cursor-pointer outline-none h-[10px]" style="appearance: none;" type="range" data-v-62e245f8="">
+        <div class="flex space-x-3 mt-4">
+          <div id="checkBox0" class="bg-white/5 w-7 h-7 flex items-center justify-center rounded-lg border-2 border-transparent hover:border-emerald-400 transitions-all duration-300">
+            <svg fill="#000" class="hidden w-3 h-3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M18.047,4,22,8.325,9.3,20,2,12.68,6.136,8.533,9.474,11.88Z"></path>
+              </g>
+            </svg>
+
+
+          </div>
+
+          <label for="checkBox0" class="text-neutral-400">ShakeEffect</label>
+
+      
+        </div>
+
+        <div class="flex space-x-3 mt-1.5">
+          <div id="checkBox1" class="bg-white/5 w-7 h-7 flex items-center justify-center rounded-lg border-2 border-transparent dynamic-color hover:border-emerald-400 transitions-all duration-300">
+            <svg fill="#000" class="hidden w-3 h-3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M18.047,4,22,8.325,9.3,20,2,12.68,6.136,8.533,9.474,11.88Z"></path>
+              </g>
+            </svg>
+
+
+          </div>
+
+          <label for="checkBox1" class="text-neutral-400">Work In Mennus</label>
+
+        </div>
+
+        <div class="flex space-x-3 mt-1.5">
+          <div id="checkBox2" class="bg-white/5 w-7 h-7 flex items-center justify-center rounded-lg border-2 border-transparent dynamic-color hover:border-emerald-400 transitions-all duration-300">
+            <svg fill="#000" class="hidden w-3 h-3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M18.047,4,22,8.325,9.3,20,2,12.68,6.136,8.533,9.474,11.88Z"></path>
+              </g>
+            </svg>
+
+
+          </div>
+
+          <label for="checkBox2" class="text-neutral-400">Mouse Sound</label>
+
+        </div>
+
+ 
+
+        <select name="mouseSound" id="mouseSound" class="bg-white/5 mt-2 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300">
+          <option class="bg-neutral-950 mt-2 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300" value="sasa" disabled selected>Mouse sound</option>
+          <option class="bg-neutral-950 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300 hover:bg-emerald-400" value="g303.wav">g303</option>
+          <option class="bg-neutral-950 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300" value="GPro.wav">GPRO</option>
+          <option class="bg-neutral-950 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300" value="hp.wav">HP</option>
+          <option class="bg-neutral-950 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300" value="microsoft.wav">Microsoft Mouse</option>
+          <option class="bg-neutral-950 rounded-lg outline-none border-transparent border-2 text-neutral-300 hover:border-emerald-400 transitions-all duration-300" value="g502.wav">G502</option>
+
+        </select>
+
+
+
+
+       </div>
+
+
+       
+
+
+       <div class="w-1/2 p-3 bg-[#0E0E0E] rounded-xl mt-4">
+        <div class="flex w-full flex items-center">
+
+        
+        <h3 class=" font-light text-neutral-300 ">Right Clicker</h3>
+        <div id="toggleRightClicker" class="ml-auto w-4 h-4 bg-white/5 rounded-full border-2 border-transparent hover:border-emerald-400 transitions-all duration-300">
+
+        </div>
+      </div>
+        <label for="cpsRight" class="w-full font-normal text-neutral-500 text-sm">CPS <span class="ml-auto text-sm text-neutral-400" id="cpsValueRight">10</span></label>
+        <input name="cpsRight" max="50" min="1" cl step="1" class="mb-4 slider bg-white/5 rounded-xl w-full cursor-pointer outline-none h-[10px]" style="appearance: none;" type="range" data-v-62e245f8="">
+
+     
+     
+
+
+
+       </div>
+      
+
+     
+ </section>
+
+ <button id="closeButton" class=" h-8 mt-4 text-black px-8 rounded-xl dynamic-color bg-emerald-400 outline-none hover:bg-emerald-600 transitions-all duration-300">Destruct</button>
+      </div>
+
+
+
+
+
+      <div id="configSection"  data-aos-duration="400" class="hidden flex-1 m-6">
+      <section class="w-full p-3 bg-[#0E0E0E] rounded-xl">
+        <h3 class=" font-light text-neutral-300">Config your autoclick</h3>
+
+
+
+      </section>
+
+
+      <section class="w-full mt-4 p-3 bg-[#0E0E0E] rounded-xl">
+        <h3 class=" font-light text-neutral-300">Color</h3>
+      
+
+
+      </section>
+
+
+     
+      <p class="absolute bottom-2 right-2 text-light text-sm text-neutral-600">coded by: jeanclap</p> 
+
+
+
+
+
+
+    
+
+      </div>
+
+      
+   
+
+    </div>
+  </body>
+
+
+  <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('input[name="cps"]').addEventListener('input', function() {
+        eel.set_cps(this.value);
+        document.getElementById('cpsValue').innerText = this.value;
+    });
+
+    document.getElementById('checkBox0').addEventListener('click', function() {
+        this.querySelector('svg').classList.toggle('hidden');
+        this.classList.toggle('bg-white/5');
+        this.classList.toggle('bg-emerald-400'); // Usa toggle para alternar correctamente
+        
+        eel.shakeEffectToggle();
+    });
+
+    document.getElementById('checkBox1').addEventListener('click', function() {
+        this.querySelector('svg').classList.toggle('hidden');
+        this.classList.toggle('bg-white/5');
+        this.classList.toggle('bg-emerald-400'); // Usa toggle para alternar correctamente
+
+        eel.workInMenusToggle();
+    });
+});
+
+
+    document.getElementById('closeButton').addEventListener('click', function() {
+      eel.destruct()
+      window.close();
+      
+    });
+
+    document.querySelector('input[name="shakeEffectValue"]').addEventListener('input', function() {
+      eel.shakeEffectValueSet(this.value);
+      document.getElementById('shakeEffectValueText').innerText = this.value;
+    });
+
+
+    document.getElementById('autoclickSectionButton').addEventListener('click', function() {
+      this.classList.add('fill-white');
+      this.classList.remove('fill-[#2C2C2C]');
+      document.getElementById('configSectionButton').classList.add('fill-[#2C2C2C]');
+      document.getElementById('configSectionButton').classList.remove('fill-white');
+      document.getElementById('configSection').classList.add('hidden');
+      document.getElementById('autoclickSection').classList.remove('hidden');
+    });
+
+    document.getElementById('configSectionButton').addEventListener('click', function() {
+      this.classList.add('fill-white');
+      this.classList.remove('fill-[#2C2C2C]');
+      document.getElementById('autoclickSectionButton').classList.add('fill-[#2C2C2C]');
+      document.getElementById('autoclickSectionButton').classList.remove('fill-white');
+      document.getElementById('autoclickSection').classList.add('hidden');
+      document.getElementById('configSection').classList.remove('hidden');
+    });
+
+
+
+    document.getElementById('toggleLeftClicker').addEventListener('click', function() {
+      this.classList.toggle('bg-white/5');
+      this.classList.toggle('bg-emerald-400');
+      eel.toggleLeftClicker();
+
+    });
+
+
+
+
+    document.getElementById('toggleRightClicker').addEventListener('click', function() {
+      this.classList.toggle('bg-white/5');
+      this.classList.toggle('bg-emerald-400');
+      eel.toggleRightClicker();
+
+    });
+
+
+    document.querySelector('input[name="cpsRight"]').addEventListener('input', function() {
+        eel.set_cpsRight(this.value);
+        document.getElementById('cpsValueRight').innerText = this.value;
+    });
+
+    document.getElementById('checkBox2').addEventListener('click', function() {
+        this.querySelector('svg').classList.toggle('hidden');
+        this.classList.toggle('bg-white/5');
+        this.classList.toggle('bg-emerald-400');
+        
+        eel.toggleSound();
+    });
+
+    
+    document.getElementById('mouseSound').addEventListener('change', function() {
+        eel.setSound(this.value);
+    });
+
+
+
+  </script>
+
+
+
+  <style>
+ .loader {
+  width: 100%;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  width: 0;
+  height: 4.8px;
+  background: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: animFw 10s linear infinite;
+}
+
+@keyframes animFw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+  </style>
+
+
+  <script>
+    AOS.init();
+  </script>
+
+
+</html>
